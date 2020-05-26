@@ -89,7 +89,7 @@ const render = ({ showLongform }) => html`
 `
 
 const section = {
-  showLongform: true,
+  showLongform: false,
   render
 };
 
