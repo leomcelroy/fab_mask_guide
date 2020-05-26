@@ -8,16 +8,18 @@
     <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
 
     <!-- riot tags -->
-    <script src="section.riot" type="riot"></script>
+    <script src="./sections/section-4.riot" type="riot"></script>
+    <script type="module" src="./sections/section-hybrids.js"></script>
   </head>
 
   <body>
-    <section></section>
+    <section-hybrids/>
+    <!-- <section-4/> -->
     
     <!-- mount this app -->
     <script>
       riot.compile().then(() => {
-        riot.mount('section')
+        riot.mount('section-4')
       })
     </script>
   </body>
