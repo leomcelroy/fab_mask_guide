@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Riot Example: Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- scripts we need -->
+    <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
+
+    <!-- riot tags -->
+    <script src="section.riot" type="riot"></script>
+  </head>
+
+  <body>
+    <section></section>
+    
+    <!-- mount this app -->
+    <script>
+      riot.compile().then(() => {
+        riot.mount('section')
+      })
+    </script>
+  </body>
+
+</html>
