@@ -1,7 +1,7 @@
 import { html, define } from 'https://unpkg.com/hybrids/src';
 
 function handleShowLongform(host) {
-  host.showLongform = !host.showLongform;
+  host.showLongform = host.showLongform;
 };
 
 const render = ({ showLongform }) => html`
