@@ -11,7 +11,7 @@ const render = ({ showLongform }) => html`
       margin-left: auto;
       margin-right: auto;
       width: 420px;
-      height: 300px;
+      height: 310px;
     }
 
     .expand {
