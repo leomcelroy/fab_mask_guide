@@ -6,4 +6,4 @@ app
   .static("/", "/public")
   .start({ port });
 
-console.log(`server listening on http://localhost:${port}`);
+console.log(`server now listening on http://localhost:${port}`);
