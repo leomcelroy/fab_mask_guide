@@ -1,11 +1,10 @@
-import { html } from "https://unpkg.com/hybrids/src";
-import HybridsImport from "./hi.js";
+import {html} from "https://cdn.jsdelivr.net/npm/lit-html@1.2.1/lit-html.js";
 
-function handleShowLongform(host) {
-  host.showLongform = !host.showLongform;
+function handleShowLongform() { // how can this trigger a re-render
+  console.log("Test");
 }
 
-const style = html`
+const style = html` // wish this was scoped
   <style>
     video {
       display: block;
@@ -72,36 +71,44 @@ const style = html`
   </style>
 `;
 
-const render = ({ showLongform }) =>
-  html`
+export default (props) => {
+  const defaultProps = {
+    title: "Section Title",
+    mainContent: html`
+      This is a new thing in the place <br/>
+      please go to a new line
+      here`,
+    showLongform: false,
+    longFormContent: html`New line.`,
+    documentsContent: `Describe the links.`,
+    attachments: [{ name: "link-title", link: "https://www.google.com" }],
+    video: "",
+    previous: { name: "previous", link: "https://www.google.com" },
+    next: { name: "next", link: "https://www.google.com" },
+  };
+
+  props = {...defaultProps, ...props};
+
+  return html`
     ${style}
-    <div class="title">Step Four: Sewing the Mask</div>
+    <div class="title">${props.title}</div>
     <br />
     <div class="section">
       <b>Description</b> <br /><br />
-      Sewing masks can be done at the fablab or at people’s homes. If a crew
-      will be working together at the fablab, it’s important to make sure the
-      sewing stations are spaced out enough to practice social distancing.
-      <br /><br />
-      The most efficient way to sew a batch of masks is via the chain sewing
-      method. The mask pieces are given to the sewer with each component type in
-      a stack (as described in the previous step). The sewer performs each step
-      of the sewing process on all the pieces in the stack, without cutting and
-      trimming the thread in between.
-      <br /><br />
-      For example, hem all the cheek pieces, then hem all the mouth pieces, then
-      connect the mouth pieces, etc.
+        ${props.mainContent}
       <br />
-      <a class="expand" onclick=${handleShowLongform}
-        >${showLongform ? "show less" : "show more"}</a
-      >
+      <a 
+        class="expand" 
+        @click=${handleShowLongform}>
+        ${props.showLongform ? "show less" : "show more"}
+      </a>
       <br />
-      ${showLongform &&
+      ${props.showLongform ?
       html`
         <div class="long-form">
-          Here is more info on the mask.
+          ${props.longFormContent}
         </div>
-      `}
+      ` : ""}
     </div>
     <div class="section">
       <b>Video</b>
@@ -109,7 +116,7 @@ const render = ({ showLongform }) =>
       <video controls type="video/mp4" src="./assets/sewingVid.mp4"></video>
       <br /><br />
       <iframe
-        src="http://www.youtube.com/embed/W7qWa52k-nE"
+        src="${props.video}"
         frameborder="0"
         allowfullscreen
       ></iframe>
@@ -118,39 +125,32 @@ const render = ({ showLongform }) =>
     <div class="section">
       <b>Documents</b>
       <br /><br />
-      The following guide outlines how to sew an Olson mask using the chain
-      sewing method as well as the slower, one-by-one method.
+      ${props.documentsContent}
       <br /><br />
-      <a
-        target="_blank"
-        href="https://docs.google.com/document/d/1bBy4I5Xly3T6qQt2tH_GlZHGS9aj_1Ijl1JU4WKS2No/edit?usp=sharing"
-        >Link</a
-      >
+      ${props.attachments.map(
+        (x) => html` 
+          <a target="_blank" href="${x.link}">
+            ${x.name}
+          </a>`
+      )}
     </div>
     <div class="section links">
       <div id="backward-link">
         ←
         <a 
-          href="https://www.google.com" 
+          href=${props.previous.link}
           target="_blank">
-          previous
+          ${props.previous.name}
         </a>
       </div>
       <div id="forward-link">
         <a 
-          href="https://www.google.com" 
+          href=${props.next.link}
           target="_blank">
-          next
+          ${props.next.name}
         </a>
         →
       </div>
     </div>
-  `.define({ HybridsImport });
-
-export default {
-  title: "Section Title",
-  attachments: [],
-  video: "",
-  showLongform: false,
-  render,
-};
+  `;
+}
