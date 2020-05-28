@@ -1,5 +1,5 @@
 import { html } from "https://unpkg.com/hybrids/src";
-import { HybridsImport } from "./hi.js";
+import HybridsImport from "./hi.js";
 
 function handleShowLongform(host) {
   host.showLongform = !host.showLongform;
@@ -147,7 +147,10 @@ const render = ({ showLongform }) =>
     </div>
   `.define({ HybridsImport });
 
-export const section = {
+export default {
+  title: "Section Title",
+  attachments: [],
+  video: "",
   showLongform: false,
   render,
 };

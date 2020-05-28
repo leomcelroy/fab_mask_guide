@@ -8,6 +8,6 @@ const render = () => html`
   </div >
 `
 
-export const HybridsImport = {
+export default {
   render
 };
