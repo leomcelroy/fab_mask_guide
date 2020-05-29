@@ -1,4 +1,4 @@
-import { innerHTML, html } from 'https://diffhtml.org/es';
+import { innerHTML } from 'https://diffhtml.org/es';
 
 
 const target = document.getElementById("diffhtml-test");
@@ -15,7 +15,7 @@ function handleIncrease() {
 function makeView(count) {
 
   var div = document.createElement("div");
-  div.innerHTML = `<div>${count} no change <div>None at all</div></div>`; // just need to make new template with directives and event listeners
+  div.innerHTML = `<div style="background: ${count > 5 ? "blue" : "yellow"};">${count} no change <div>None at all</div></div>`; // just need to make new template with directives and event listeners
 
   div.addEventListener("click", () => {
     handleIncrease();
