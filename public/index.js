@@ -3,4 +3,4 @@ import sectionTemplate from "./sections/section-template.js";
 
 const target = document.body;
 
-render(sectionTemplate({}), target);
+// render(sectionTemplate({}), target);
