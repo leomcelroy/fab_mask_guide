@@ -4,10 +4,10 @@ export function section(props, id) {
   // props
   const initProps = {
     showLongForm: false,
+    makeHTML: "<b>Test</b>",
     title: "Section Title",
-    mainContent: `This is a new thing in the place <br />
-      please go to a new line here`,
-    longFormContent: html`New line.`,
+    mainContent: `This is a new thing in the place, \nplease go to a new line here`,
+    longFormContent: `New line.`,
     documentsContent: `Describe the links.`,
     attachments: [{ name: "link-title", link: "https://www.google.com" }],
     video: "",
@@ -15,12 +15,27 @@ export function section(props, id) {
     next: { name: "next", link: "https://www.google.com" },
   };
 
+  const makeHTML = str => {
+    let temp = document.createElement("div");
+    temp.innerHTML = str;
+    return temp;
+  };
+
   const view = (props) => html`
     <div class="title">${props.title}</div>
     <br />
+    ${
+      props.makeHTML ?
+      html`
+      <div class="section">
+        ${makeHTML(props.makeHTML)}
+      </div>
+      ` :
+      ""
+    }
     <div class="section">
       <b>Description</b> <br /><br />
-      ${props.mainContent}
+      <div style="white-space: pre-wrap;">${props.mainContent}</div>
       <br />
       <a
         class="expand"
@@ -33,31 +48,35 @@ export function section(props, id) {
       <br />
       ${props.showLongForm
         ? html`
-            <div class="long-form">
-              ${props.longFormContent}
-            </div>
+            <div class="long-form" style="white-space: pre-wrap;">${props.longFormContent}</div>
           `
         : ""}
     </div>
-    <div class="section">
-      <b>Video</b>
-      <br /><br />
-      <video controls type="video/mp4" src="./assets/sewingVid.mp4"></video>
-      <br /><br />
-      <iframe src="${props.video}" frameborder="0" allowfullscreen></iframe>
-      <br /><br />
-    </div>
-    <div class="section">
-      <b>Documents</b>
-      <br /><br />
-      ${props.documentsContent}
-      <br /><br />
-      ${props.attachments.map(
-        (x) => html` <a target="_blank" href="${x.link}">
-          ${x.name}
-        </a>`
-      )}
-    </div>
+    ${ props.video !== "" ?
+        html`
+          <div class="section">
+            <b>Video</b>
+            <br /><br />
+            <iframe src="${props.video}" frameborder="0" allowfullscreen></iframe>
+            <br /><br />
+          </div>
+        ` : ""
+    }
+    ${ props.attachments.length > 0 ?
+        html`
+        <div class="section">
+          <b>Documents</b>
+          <br /><br />
+          ${props.documentsContent}
+          <br /><br />
+          ${props.attachments.map(
+            (x) => html` <a target="_blank" href="${x.link}">
+              ${x.name}
+            </a>`
+          )}
+        </div>
+        ` : ""
+    }
     <div class="section links">
       <div id="backward-link">
         ←
