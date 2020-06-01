@@ -6,3 +6,66 @@ body {
   margin: 0;
   padding: 100px;
 }
+
+video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 420px;
+  height: 300px;
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 420px;
+  height: 300px;
+}
+
+.expand {
+  position: absolute;
+  right: 5%;
+}
+
+.expand:hover {
+  color: purple;
+}
+
+.title {
+  font-size: 30pt;
+  width: 80%;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  background: white;
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.long-form {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.links {
+  background: transparent;
+  border: none;
+}
+
+#forward-link {
+  float: right;
+}
+
+#backward-link {
+  float: left;
+}
