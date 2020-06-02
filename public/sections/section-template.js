@@ -1,4 +1,4 @@
-import {html, svg, render, initState, makeID} from "../libs.js";
+import { html, initState } from "../libs.js";
 
 export function section(props, id) {
   // props
@@ -15,7 +15,7 @@ export function section(props, id) {
     next: { name: "next", link: "https://www.google.com" },
   };
 
-  const makeHTML = str => {
+  const makeHTML = (str) => {
     let temp = document.createElement("div");
     temp.innerHTML = str;
     return temp;
@@ -24,15 +24,13 @@ export function section(props, id) {
   const view = (props) => html`
     <div class="title">${props.title}</div>
     <br />
-    ${
-      props.makeHTML ?
-      html`
-      <div class="section">
-        ${makeHTML(props.makeHTML)}
-      </div>
-      ` :
-      ""
-    }
+    ${props.makeHTML
+      ? html`
+          <div class="section">
+            ${makeHTML(props.makeHTML)}
+          </div>
+        `
+      : ""}
     <div class="section">
       <b>Description</b> <br /><br />
       <div style="white-space: pre-wrap;">${props.mainContent}</div>
@@ -52,31 +50,37 @@ export function section(props, id) {
           `
         : ""}
     </div>
-    ${ props.video !== "" ?
-        html`
+    ${props.video !== ""
+      ? html`
           <div class="section">
             <b>Video</b>
             <br /><br />
-            <iframe src="${props.video}" frameborder="0" allowfullscreen></iframe>
+            <iframe
+              src="${props.video}"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
             <br /><br />
           </div>
-        ` : ""
-    }
-    ${ props.attachments.length > 0 ?
-        html`
-        <div class="section">
-          <b>Documents</b>
-          <br /><br />
-          ${props.documentsContent}
-          <br /><br />
-          ${props.attachments.map(
-            (x) => html` <a target="_blank" href="${x.link}">
-              ${x.name}
-            </a>`
-          )}
-        </div>
-        ` : ""
-    }
+        `
+      : ""}
+    ${props.attachments.length > 0
+      ? html`
+          <div class="section">
+            <b>Documents</b>
+            <br /><br />
+            ${props.documentsContent}
+            <br /><br />
+            ${props.attachments.map(
+              (x) => html`
+                <a target="_blank" href="${x.link}">
+                  ${x.name}
+                </a>
+              `
+            )}
+          </div>
+        `
+      : ""}
     <div class="section links">
       <div id="backward-link">
         ←
