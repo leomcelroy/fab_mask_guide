@@ -1,15 +1,24 @@
 import { html, initState } from "../libs.js";
 
+function make_href(path) {
+  let current = window.location.href;
+  let new_href = current.split("=");
+
+  new_href[1] = path;
+
+  return new_href.join("=");
+}
+
 export function section(props, id) {
   // props
   const initProps = {
     showLongForm: false,
-    makeHTML: "<b>Test</b>",
-    title: "Section Title",
-    mainContent: `This is a new thing in the place, \nplease go to a new line here`,
-    longFormContent: `New line.`,
-    documentsContent: `Describe the links.`,
-    attachments: [{ name: "link-title", link: "https://www.google.com" }],
+    makeHTML: "",
+    title: "",
+    mainContent: ``,
+    longFormContent: ``,
+    documentsContent: ``,
+    attachments: [],
     video: "",
     previous: { name: "previous", link: "https://www.google.com" },
     next: { name: "next", link: "https://www.google.com" },
@@ -21,6 +30,8 @@ export function section(props, id) {
     return temp;
   };
 
+  // <div style="white-space: pre-wrap;">${props.mainContent}</div>
+
   const view = (props) => html`
     <div class="title">${props.title}</div>
     <br />
@@ -31,25 +42,31 @@ export function section(props, id) {
           </div>
         `
       : ""}
-    <div class="section">
-      <b>Description</b> <br /><br />
-      <div style="white-space: pre-wrap;">${props.mainContent}</div>
-      <br />
-      <a
-        class="expand"
-        onclick=${() => {
-          update({ showLongForm: !props.showLongForm });
-        }}
-      >
-        ${props.showLongForm ? "show less" : "show more"}
-      </a>
-      <br />
-      ${props.showLongForm
-        ? html`
-            <div class="long-form" style="white-space: pre-wrap;">${props.longFormContent}</div>
-          `
-        : ""}
-    </div>
+    ${props.mainContent ?
+      html`
+        <div class="section">
+          <b>Description</b> <br /><br />
+          <div style="white-space: pre-wrap;">${props.mainContent}</div>
+          <br />
+          <a
+            class="expand"
+            onclick=${() => {
+              update({ showLongForm: !props.showLongForm });
+            }}
+          >
+            ${props.showLongForm ? "show less" : "show more"}
+          </a>
+          <br />
+          ${props.showLongForm
+            ? html`
+                <div class="long-form" style="white-space: pre-wrap;">${props.longFormContent}</div>
+              `
+            : ""}
+        </div>
+      `
+      : ""
+    }
+    
     ${props.video !== ""
       ? html`
           <div class="section">
@@ -84,12 +101,12 @@ export function section(props, id) {
     <div class="section links">
       <div id="backward-link">
         ←
-        <a href=${props.previous.link} target="_blank">
+        <a href=${make_href(props.previous.link)}>
           ${props.previous.name}
         </a>
       </div>
       <div id="forward-link">
-        <a href=${props.next.link} target="_blank">
+        <a href=${make_href(props.next.link)}>
           ${props.next.name}
         </a>
         →
