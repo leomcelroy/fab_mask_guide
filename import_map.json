@@ -1,0 +1,5 @@
+{
+  "imports": {
+     "abc": "https://deno.land/x/abc@v1.0.0-rc8/mod.ts"
+  }
+}
