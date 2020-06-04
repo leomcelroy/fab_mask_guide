@@ -69,3 +69,12 @@ iframe {
 #backward-link {
   float: left;
 }
+
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.header {
+  font-weight: bold;
+}
