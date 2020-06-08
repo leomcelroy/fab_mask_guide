@@ -67,7 +67,7 @@ Fab@CIC does not have a recommended brand at this time. Some examples of this pr
 <b>Nose band:</b> to form the top of the mask to the bridge of the wearer’s nose
 16 gauge craft wire is preferred; in a pinch, pipe cleaners can be used.
 <br/><br/>
-<b>Filter:</b> there are many hydrophobic products that could be used as an extra filtration layer (see subsequent section for a more detailed discussion). Fab@CIC has had success with Halyard H600, a sterilization wrap.  Product Page, Vendor
+<b>Filter:</b> there are many hydrophobic products that could be used as an extra filtration layer (see subsequent section for a more detailed discussion). Fab@CIC has had success with Halyard H600, a sterilization wrap.  <a href="https://products.halyardhealth.com/surgical-solutions/sterilization-solutions/sterilization-wraps/halyard-kimguard-one-step-sterilization-wrap.html">Product Page</a>, <a href="https://www.usamedicalsurgical.com/halyard-health-one-step-sterilization-wrap-h600-fabric-heavy-duty/">Vendor</a>
 `
 
 export default {

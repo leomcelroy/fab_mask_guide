@@ -4,9 +4,16 @@ Washing and ironing the cotton fabric is perhaps a surprisingly important part o
 Washing can be done by volunteers at home or by a professional washing service, with rates varying by location. If you’re relying on a group of volunteers to cut, wash, dry and iron, consider printing or emailing the information from this section, including the following washing and ironing tips.
 `
 
+const documentsContent = ``
+
+const attachments = [
+  {name: "Washing and Ironing Tips", link:"https://docs.google.com/document/d/1PXdSWEQQb573og0FaE68EurpgIr6YEuXDukp-Htjapg/edit?usp=sharing"}
+]
+
 export default {
   title: "Washing and Ironing",
   mainContent,
+  attachments,
   previous: { name: "previous", link: "measuringAndCutting" },
   next: { name: "next", link: "laseringAndOrganizing" }
 }

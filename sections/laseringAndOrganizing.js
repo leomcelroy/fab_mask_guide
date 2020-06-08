@@ -10,22 +10,33 @@ After obtaining this profile make some cut-sheet patterns. Our preferred approac
 For the sake of efficiency we recommend counting your sets as you remove them from the laser cutter. We originally produced bundles of mask sets where each bundle contained the components for one full mask. We later found sewers often preferred and were more productive when provided with stacks of components. This was especially true when sewers used the highly effective chain sewing technique. Because of the alternating layers each stack will contain an even number of pieces where every two pieces form a pair. Make sure your stacks have the same number of pieces so a stack of outsides and a stack of insides form complete sets.
 <br/><br/>
 Add the appropriate number of ear loops or amount of elastic to each set of stacks (in our case we added two hair ties for each mask). Leave in stacks for the sewers to pick up or bag in Ziplock bags for distribution to home sewers.
-`
+<br/><br/>
+[INSERT DIAGRAM]
+`;
 
 const tips = [
-	"If you’re not already in the habit, we highly recommend cleaning your laser lens daily when running a mask production line. Otherwise, soot will build up quickly and diminish your laser’s ability to cut.",
-	"Be sure to use the air compressor when cutting your fabric. Cotton can light on fire very easily and the compressor dramatically reduces the risk of fires.",
-	"Because of the heightened risk of this material catching fire, the laser operator should always keep their eyes on the cut job."
-]
+  "If you’re not already in the habit, we highly recommend cleaning your laser lens daily when running a mask production line. Otherwise, soot will build up quickly and diminish your laser’s ability to cut.",
+  "Be sure to use the air compressor when cutting your fabric. Cotton can light on fire very easily and the compressor dramatically reduces the risk of fires.",
+  "Because of the heightened risk of this material catching fire, the laser operator should always keep their eyes on the cut job.",
+];
 
-const documentsContent = `Laser cutter files have been provided with this toolkit. These files were made for a laser bed that is 32” x 20”, but you can edit them based on the size of your laser cutter. We’ve designed the files to have the outside (face) pieces all on one file, and the mouth and cheek pieces (inside) all on another file because our fabric stock tends to have designs that are better for either the outside or the inside.`
+const documentsContent = `Laser cutter files have been provided with this toolkit. These files were made for a laser bed that is 32” x 20”, but you can edit them based on the size of your laser cutter. We’ve designed the files to have the outside (face) pieces all on one file, and the mouth and cheek pieces (inside) all on another file because our fabric stock tends to have designs that are better for either the outside or the inside.`;
+const attachments = [
+	{ name: "Attach PDF of Cut Sheet", link: "http://www.leomcelroy.com" },
+	{ name: "Attach PDF of Inside", link: "http://www.leomcelroy.com" },
+	{ name: "Attach PDF of Outside", link: "http://www.leomcelroy.com" },
+	{ name: "Attach PDF of 3 Pieces", link: "http://www.leomcelroy.com" },
+];
+
+const video = "https://www.youtube.com/watch?v=rG38EFbZc_M";
 
 export default {
   title: "Lasering and Organizing Sets",
-	mainContent,
-	tips,
-	documentsContent,
-	attachments: [{ name: "previous", link: "washingAndIroning" }],
+  mainContent,
+  tips,
+  video,
+  documentsContent,
+  attachments,
   previous: { name: "previous", link: "washingAndIroning" },
-  next: { name: "next", link: "sewing" }
-}
+  next: { name: "next", link: "sewing" },
+};

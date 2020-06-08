@@ -16,6 +16,9 @@ import sanitizing from "./sections/sanitizing.js"
 import theOlsonMask from "./sections/theOlsonMask.js"
 import washingAndIroning from "./sections/washingAndIroning.js"
 import sewing from "./sections/sewing.js"
+import filter from "./sections/filter.js"
+import noseBand from "./sections/noseBand.js"
+import doubleSidedTape from "./sections/doubleSidedTape.js"
 
 
 // place arguments for section routes here
@@ -27,6 +30,9 @@ const routes = {
   "cost": cost,
   "earSavers": earSavers,
   "filtration": filtration,
+  "filter": filter,
+  "noseBand": noseBand,
+  "doubleSidedTape": doubleSidedTape,
   "laseringAndOrganizing": laseringAndOrganizing,
   "measuringAndCutting": measuringAndCutting,
   "sewing": sewing,

@@ -215,13 +215,21 @@ const mainContent = `
     </table>
 </div>
 <p dir="ltr">&nbsp;</p>
-`
+`;
+
+const attachments = [
+  {
+    name: "Example timetable for 3000 masks",
+    link:
+      "https://docs.google.com/document/d/1LSMSPxXh1fIaQHc_nFJuy5R2Cu62UcZInMSuQQ1Ks1U/edit?usp=sharing",
+  },
+];
 
 export default {
   title: "Cost",
-	mainContent,
-	documentsContent: "Link to example timetable.",
-	attachments: [{name: "Example Time Table", link: "https://www.google.com"}],
+  mainContent,
+  documentsContent: "Link to example timetable.",
+  attachments,
   previous: { name: "previous", link: "materials" },
-  next: { name: "next", link: "process" }
-}
+  next: { name: "next", link: "process" },
+};

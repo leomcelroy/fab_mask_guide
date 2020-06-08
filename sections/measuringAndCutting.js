@@ -5,6 +5,8 @@ Cutting the fabric prior to washing it makes it easier to handle. The first step
 <li>If your laser cutter bed is 24” long (x axis) and 14” wide (y axis), you could design a shorter cut file that is 22” long and cut the fabric at 29”, then fold in half widthwise and then length-wise, so that you have a four-layer piece that measures 22” by 14”.</li>
 </ul>
 As you’ll see further along, laser cutting fabric in layers is important for efficiency!
+<br/><br/>
+[INSERT DIAGRAM]
 `
 
 const tips = [

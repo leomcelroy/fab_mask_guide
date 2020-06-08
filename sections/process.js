@@ -1,9 +1,18 @@
+function make_href(path) {
+  let current = window.location.href;
+  let new_href = current.split("=");
+
+  new_href[1] = path;
+
+  return new_href.join("=");
+}
+
 const mainContent = `
 <ul>
-	<li><a>Measuring and Cutting Fabric</a></li>
-	<li><a>Washing and Ironing</a></li>
-	<li><a>Lasering and Organizing Sets</a></li>
-	<li><a>Sewing Masks</a></li>
+  <li><a href="${make_href("measuringAndCutting")}">Measuring and Cutting Fabric</a></li>
+  <li><a href="${make_href("washingAndIroning")}">Washing and Ironing</a></li>
+  <li><a href="${make_href("laseringAndOrganizing")}">Lasering and Organizing Sets</a></li>
+  <li><a href="${make_href("sewing")}">Sewing Masks</a></li>
 </ul>
 `
 
