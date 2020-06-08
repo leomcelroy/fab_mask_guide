@@ -109,6 +109,11 @@ export function section(props, id) {
           </div>
         ` : ""
       }
+      <div id="center-link">
+        <a href=${make_href("tableOfContents")}>
+          Table of Contents
+        </a>
+      </div>
       ${Object.keys(props.next).length > 0 ? 
         html`
           <div id="forward-link">

@@ -28,7 +28,7 @@ const attachments = [
 	{ name: "Attach PDF of 3 Pieces", link: "http://www.leomcelroy.com" },
 ];
 
-const video = "https://www.youtube.com/watch?v=rG38EFbZc_M";
+const video = "http://www.youtube.com/embed/W7qWa52k-nE";
 
 export default {
   title: "Lasering and Organizing Sets",

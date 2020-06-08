@@ -66,6 +66,13 @@ iframe {
   float: right;
 }
 
+#center-link {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+}
+
 #backward-link {
   float: left;
 }
