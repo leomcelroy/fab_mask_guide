@@ -13,7 +13,7 @@ Add the appropriate number of ear loops or amount of elastic to each set of stac
 <br/><br/>
 The diagram below depicts how alternating stacks of fabric sheets produce complementary mirrored pairs upon cutting.
 <br/>
-<img class="center" src="../assets/layeringDiagram.png" alt="Diagram depicting how to layer pieces for cutting and stacking.">
+<img class="center" src="${window.location.href.includes("leomcelroy") ? "https://leomcelroy.com/fab_mask_guide/" : ".."}/assets/layeringDiagram.png" alt="Diagram depicting how to layer pieces for cutting and stacking.">
 `;
 
 const tips = [

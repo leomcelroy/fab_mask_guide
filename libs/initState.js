@@ -1,14 +1,13 @@
-// import {
-//   html,
-//   render,
-//   svg
-// } from "https://cdn.jsdelivr.net/npm/lit-html@1.2.1/lit-html.js";
-
 import { render, html, svg } from './uhtml.js';
 
 function makeID() {
   return "id" + new Date().getTime();
 }
+
+function updateWindowLeos(id, newProps) {
+  if (!window.leos) window.leos = {};
+  window.leos[id] = newProps;
+};
 
 function initState({
   view,
@@ -25,19 +24,19 @@ function initState({
 
   function update(props) {
     const old = document.getElementById(id);
-    const oldProps = JSON.parse(old.getAttribute("props"));
+    const oldProps = window.leos[id];
     const newProps = { ...oldProps, ...props };
-    old.setAttribute("props", JSON.stringify(newProps));
+
+    updateWindowLeos(id, newProps);
 
     render(old, view(newProps));
-    // render(view(newProps), old);
   }
 
   const old = document.getElementById(id);
 
   if (old) {
     // get old props and merge with these
-    const oldProps = JSON.parse(old.getAttribute("props"));
+    const oldProps = window.leos[id];
     props = { ...oldProps, ...props };
 
     // shouldn't be necessary ?
@@ -46,12 +45,14 @@ function initState({
     props = { ...initProps, ...props };
   }
 
+  updateWindowLeos(id, props);
+
   return {
     update,
     mount: html`
     <div 
       id=${id} 
-      props=${JSON.stringify(props)}>
+      >
       ${view(props)}
     </div>`,
   };

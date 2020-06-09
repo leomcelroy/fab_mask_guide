@@ -1,1 +1,0 @@
-deno run --allow-net --allow-read --importmap=import_map.json --unstable server.js
