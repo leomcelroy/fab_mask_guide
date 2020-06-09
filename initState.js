@@ -4,7 +4,7 @@
 //   svg
 // } from "https://cdn.jsdelivr.net/npm/lit-html@1.2.1/lit-html.js";
 
-import { render, html, svg } from 'https://unpkg.com/uhtml?module';
+import { render, html, svg } from './uhtml.js';
 
 function makeID() {
   return "id" + new Date().getTime();

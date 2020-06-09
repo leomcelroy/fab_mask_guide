@@ -3,10 +3,23 @@ Sewing masks can be done at the fablab or at people’s homes. If a crew will be
 <br/><br/>
 The most efficient way to sew a batch of masks is via the chain sewing method. The mask pieces are given to the sewist with each component type in a stack (as described in the previous step). The sewist performs each step of the sewing process on all the pieces in the stack, without cutting and trimming the thread in between. For example, hem all the cheek pieces in a stack, then hem all the mouth pieces, then attach all the mouth pieces, etc.
 <br/><br/>
-The following guide outlines how to sew an Olson mask using the chain sewing method as well as the slower, one-by-one method. 
+The attached guides outline how to sew an Olson mask using the chain sewing method as well as the slower, one-by-one method. 
 `
 
-const video = "http://www.youtube.com/embed/W7qWa52k-nE";
+const video = `
+<video
+controls="controls" 
+src="./assets/Sewing.mp4">
+</video>
+<br />
+`
+
+{/* <iframe
+src=""
+frameborder="0"
+allowfullscreen
+></iframe>
+<br /><br /> */}
 
 export default {
   title: "Sewing Masks",

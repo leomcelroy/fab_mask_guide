@@ -70,13 +70,7 @@ export function section(props, id) {
       ? html`
           <div class="section">
             <b>Video</b>
-            <br /><br />
-            <iframe
-              src="${props.video}"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <br /><br />
+            ${makeHTML(props.video)}
           </div>
         `
       : ""}

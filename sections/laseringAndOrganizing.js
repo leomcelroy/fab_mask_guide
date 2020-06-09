@@ -30,7 +30,20 @@ const attachments = [
 	{ name: "Attach PDF of 3 Pieces", link: "http://www.leomcelroy.com" },
 ];
 
-const video = "http://www.youtube.com/embed/W7qWa52k-nE";
+const video = `
+<video
+controls="controls" 
+src="./assets/Cutting.mp4">
+</video>
+<br />
+`
+
+{/* <iframe
+src=""
+frameborder="0"
+allowfullscreen
+></iframe>
+<br /><br /> */}
 
 export default {
   title: "Lasering and Organizing Sets",
