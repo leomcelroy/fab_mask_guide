@@ -8,7 +8,7 @@ As you’ll see further along, laser cutting fabric in layers is important for e
 <br/><br/>
 The diagram below depicts folding the material widthwise with the bottom side of the fabric inwards.
 <br/>
-<img class="center" src="${window.location.href.includes("leomcelroy") ? "https://leomcelroy.com/fab_mask_guide/" : ".."}/assets/roll.png" alt="Diagram depicting folding the material widthwise, bottom side of the fabric inwards.">
+<img class="center" src="${window.location.href.includes("leomcelroy") ? "https://leomcelroy.com/fab_mask_guide" : ".."}/assets/roll.png" alt="Diagram depicting folding the material widthwise, bottom side of the fabric inwards.">
 `
 
 const tips = [

@@ -1,7 +1,7 @@
 const mainContent = `
 The first step to setting up your mask laser cutting operation is to profile your machine. This means determining what power and speed settings to use with the materials you’ve selected for your masks.
 <br/><br/>
-For high throughput you’ll be cutting multiple sheets of cloth at once. The sheets should be placed in alternating directions (top-side up then bottom-side up); this is done at the ironing step. Each pair of sheets will form mirrored pairs of components. This technique reduces sorting time because you’ll be cutting matched stacks of mask components. (See the diagram on the next page.) 
+For high throughput you’ll be cutting multiple sheets of cloth at once. The sheets should be placed in alternating directions (top-side up then bottom-side up); this is done at the ironing step. Each pair of sheets will form mirrored pairs of components. This technique reduces sorting time because you’ll be cutting matched stacks of mask components. (See the diagram below.) 
 <br/><br/>
 This also means you’ll want to set the speed and power profile to the maximum number of sheets that you can cut in your machine at one time. For a reference point, we used a 75W Epilog laser to cut 4 sheets at 100% power and 40% speed. We used the same machine to cut one sheet at 100% power and 90% speed.
 <br/><br/>
@@ -13,7 +13,7 @@ Add the appropriate number of ear loops or amount of elastic to each set of stac
 <br/><br/>
 The diagram below depicts how alternating stacks of fabric sheets produce complementary mirrored pairs upon cutting.
 <br/>
-<img class="center" src="${window.location.href.includes("leomcelroy") ? "https://leomcelroy.com/fab_mask_guide/" : ".."}/assets/layeringDiagram.png" alt="Diagram depicting how to layer pieces for cutting and stacking.">
+<img class="center" src="${window.location.href.includes("leomcelroy") ? "https://leomcelroy.com/fab_mask_guide" : ".."}/assets/layeringDiagram.png" alt="Diagram depicting how to layer pieces for cutting and stacking.">
 `;
 
 const tips = [

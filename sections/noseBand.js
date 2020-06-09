@@ -3,7 +3,7 @@ There are quite a few options, ranging from pipe cleaners to metal wire. We reco
 <br/><br/>
 Cut the pieces of wire to just under the length of the top of the mouth pieces, about 4”. Use wire pliers to bend back the tips so they don’t scratch or pierce the fabric. Insert the wire into the top of the pocket. Optionally, you can stitch a line under the wire to create a pocket to keep it from edging downwards.
 <br/><br/>
-<img class="center" src="../assets/noseBand.png" alt="Picture of wire noseband.">
+<img class="center" src="${window.location.href.includes("leomcelroy") ? "https://leomcelroy.com/fab_mask_guide" : ".."}/assets/noseBand.png" alt="Picture of wire noseband.">
 `;
 
 const tips = [
