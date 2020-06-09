@@ -11,7 +11,9 @@ For the sake of efficiency we recommend counting your sets as you remove them fr
 <br/><br/>
 Add the appropriate number of ear loops or amount of elastic to each set of stacks (in our case we added two hair ties for each mask). Leave in stacks for the sewers to pick up or bag in Ziplock bags for distribution to home sewers.
 <br/><br/>
-[INSERT DIAGRAM]
+The diagram below depicts how alternating stacks of fabric sheets produce complementary mirrored pairs upon cutting.
+<br/>
+<img class="center" src="../assets/layeringDiagram.png" alt="Diagram depicting how to layer pieces for cutting and stacking.">
 `;
 
 const tips = [

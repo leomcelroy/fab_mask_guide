@@ -6,7 +6,9 @@ Cutting the fabric prior to washing it makes it easier to handle. The first step
 </ul>
 As you’ll see further along, laser cutting fabric in layers is important for efficiency!
 <br/><br/>
-[INSERT DIAGRAM]
+The diagram below depicts folding the material widthwise with the bottom side of the fabric inwards.
+<br/>
+<img class="center" src="../assets/roll.png" alt="Diagram depicting folding the material widthwise, bottom side of the fabric inwards.">
 `
 
 const tips = [

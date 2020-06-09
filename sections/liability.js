@@ -4,7 +4,7 @@ Your Fab Lab is trying to help people reduce the risk of infection but despite y
 
 
 const attachments = [
-	{name:"Liability Handout", link:"https://docs.google.com/document/d/1zGP7k2ss7GxXaOmBkC5Ekh2xII6t_Rk3WAs-vKskNuQ/edit?usp=sharing"}
+	{name:"Liability Handout", link:"https://docs.google.com/document/d/1JvGV_0yfJbRzRrUevyZUEUk5PpmFtSSY2dSVcDPINqU/edit?usp=sharing"}
 ]
 
 export default {

@@ -6,7 +6,7 @@ The most efficient way to sew a batch of masks is via the chain sewing method. T
 The following guide outlines how to sew an Olson mask using the chain sewing method as well as the slower, one-by-one method. 
 `
 
-const video = "https://www.youtube.com/watch?v=rG38EFbZc_M";
+const video = "http://www.youtube.com/embed/W7qWa52k-nE";
 
 export default {
   title: "Sewing Masks",
