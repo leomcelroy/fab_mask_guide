@@ -5,7 +5,7 @@ Producing PPE will be an important part of the mission and business of many Fab 
 <br/><br/>
 This toolkit provides comprehensive guidance on how to set up a system to produce face masks in a Fab Lab. The mask design was chosen for its utility as a basic face mask and as a higher performing protective filter, as well as its ability to be made in community Fab Labs. This toolkit includes a bill of materials, instructions on each part of the production process, guidance on safety procedures and legal disclaimers, as well as sample documents that can be printed out and used directly.
 
-<b>emitted</b>
+Hello!
 `
 
 
