@@ -13,7 +13,7 @@ Add the appropriate number of ear loops or amount of elastic to each set of stac
 <br/><br/>
 The diagram below depicts how alternating stacks of fabric sheets produce complementary mirrored pairs upon cutting.
 <br/>
-<img class="center" src="${window.location.href.includes("leomcelroy") ? "https://leomcelroy.com/fab_mask_guide" : ".."}/assets/layeringDiagram.png" alt="Diagram depicting how to layer pieces for cutting and stacking.">
+<img class="center" src="${window.location.href.includes("fab-at-cic") ? "https://fab-at-cic.github.io/fab_mask_guide" : ".."}/assets/layeringDiagram.png" alt="Diagram depicting how to layer pieces for cutting and stacking.">
 `;
 
 const tips = [
@@ -24,10 +24,10 @@ const tips = [
 
 const documentsContent = `Laser cutter files have been provided with this toolkit. These files were made for a laser bed that is 32” x 20”, but you can edit them based on the size of your laser cutter. We’ve designed the files to have the outside (face) pieces all on one file, and the mouth and cheek pieces (inside) all on another file because our fabric stock tends to have designs that are better for either the outside or the inside.`;
 const attachments = [
-	{ name: "Attach PDF of Cut Sheet", link: "http://www.leomcelroy.com" },
-	{ name: "Attach PDF of Inside", link: "http://www.leomcelroy.com" },
-	{ name: "Attach PDF of Outside", link: "http://www.leomcelroy.com" },
-	{ name: "Attach PDF of 3 Pieces", link: "http://www.leomcelroy.com" },
+	{ name: "Attach PDF of Cut Sheet", link: "https://drive.google.com/file/d/1pG8FHZr4eKG-6Osi6zBt9qY0J_jPwXHq/view?usp=sharing" },
+	{ name: "Attach PDF of Inside", link: "https://drive.google.com/file/d/1mx19570Pfx9b3GnyZ_KfNceOtk5X7ADC/view?usp=sharing" },
+	{ name: "Attach PDF of Outside", link: "https://drive.google.com/file/d/1apGQZrBXfhuy_no5N8Mf8Tk0qh7jG6Q8/view?usp=sharing" },
+	{ name: "Attach PDF of 3 Pieces", link: "https://drive.google.com/file/d/1kUJuHGLQXieCrCLPYZ2gw9_Nx9E7e833/view?usp=sharing" },
 ];
 
 const video = `
